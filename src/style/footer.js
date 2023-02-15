@@ -5,8 +5,8 @@ export const Container = styled.div`
     aling-items: center;
     justify-content: center;
     width: 100%;
-    font-family: 'Ubuntu', sans-serif;
     color: #43413F;
+    padding: 12px;
 
     p {
         font-size: 12px;

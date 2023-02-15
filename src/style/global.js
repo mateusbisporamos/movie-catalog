@@ -10,8 +10,6 @@ const GlobalStyle = createGlobalStyle `
     body {
         font-family: 'Ubuntu', sans-serif;
         background-color: #181818;
-        width: 100%;
-        height: 100%;
     }
 
     input, button {
