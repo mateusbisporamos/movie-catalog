@@ -6,24 +6,33 @@ export const Container = styled.div`
     align-items: center;
     width: 100%;
     height: auto;
-    border-radius: 4px;
+    border-radius: 8px;
     gap: 12px;
     padding-bottom: 8px;
-    cursor: default;
+    cursor: pointer;
     transition: .5s;
     
     img{
         width: 100%;
         height: 100%;
-        border-radius: 4px;
+        min-height: 332px;
+        max-height: 332px;
+        border-radius: 8px;
     }
 
     p{
         text-align: center;
         width: 100%;
+        padding: 0 8px;
         font-size: 16px;
         font-weight: 500;
         color: #43413F;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+                line-clamp: 1; 
+        -webkit-box-orient: vertical;
         transition: .5s;
     }
 
@@ -37,6 +46,7 @@ export const Container = styled.div`
         border-radius: 4px;
         color: white;
         cursor: pointer;
+        bootom: 0;
         transition:.5s;
         
         :hover{
@@ -48,7 +58,7 @@ export const Container = styled.div`
     }
 
     :hover{
-        background-color: #43413F;
+        background-color: #202020;
 
         p{
             font-weight: 500;
