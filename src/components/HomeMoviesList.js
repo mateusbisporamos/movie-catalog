@@ -29,7 +29,7 @@ const HomeMoviesList = () => {
             setPageNumber(parseInt(params.page))
         }
         fetchMovies(pageNumber)
-    }, [])
+    }, [moviesList])
 
     console.log("Page Selector NOT FINISHED")
 
@@ -46,7 +46,7 @@ const HomeMoviesList = () => {
                     <Link to={`/${pageNumber + 3}`}> <S.PageNumber>{pageNumber + 3}</S.PageNumber> </Link>
                     <Link to={`/${pageNumber + 4}`}> <S.PageNumber>{pageNumber + 4}</S.PageNumber> </Link>
                     ...
-                    <Link to={`/${dataList.total_pages}`}> <S.PageNumber>{dataList.total_pages}</S.PageNumber> </Link>
+                    <Link to={`/500`}> <S.PageNumber>500</S.PageNumber> </Link>
                 </S.PageSelector>
                 <p>Total Results: {dataList.total_results} Movies</p>
             </S.PagesConatiner>
@@ -55,8 +55,7 @@ const HomeMoviesList = () => {
                 { moviesList.map((movie) => <Movie id={movie.id} title={movie.title} posterURL={movie.poster_path} />) }
             </S.MoviesContainer>
 
-            <S.PagesConatiner>
-                <S.PageSelector>
+            <S.PageSelector>
                     <Link to={`/${pageNumber - 1}`}> <S.PageNumber>{pageNumber - 1}</S.PageNumber> </Link>
                     ...
                     <Link to={`/${pageNumber}`}> <S.PageNumber selected>{pageNumber}</S.PageNumber> </Link>
@@ -65,10 +64,8 @@ const HomeMoviesList = () => {
                     <Link to={`/${pageNumber + 3}`}> <S.PageNumber>{pageNumber + 3}</S.PageNumber> </Link>
                     <Link to={`/${pageNumber + 4}`}> <S.PageNumber>{pageNumber + 4}</S.PageNumber> </Link>
                     ...
-                    <Link to={`/${dataList.total_pages}`}> <S.PageNumber>{dataList.total_pages}</S.PageNumber> </Link>
-                </S.PageSelector>
-                <p>Total Results: {dataList.total_results} Movies</p>
-            </S.PagesConatiner>
+                    <Link to={`/500`}> <S.PageNumber>500</S.PageNumber> </Link>
+            </S.PageSelector>
         </S.Container>
     )
 }
