@@ -53,21 +53,33 @@ export const PageSelector = styled.div`
         justify-content: center;
         text-decoration: none;
         text-align: center;
-        height: 22px;
-        min-width: 22px;
+        height: 24px;
+        min-width: 24px;
         border-radius: 4px;
+    }    
+`
+const color = (props) => {
+    if(props.selected === true){
+        return "#181818;"
+    } else if (props.disable === true){
+        return "#43413F;"
+    } else {
+        return "#E0A52E;"
     }
-    `
-    
+}
 export const PageNumber = styled.span`
-    width: 100%;
+    justify-content: center;
+    min-width: 100%;
+    text-align: center;
     height: 100%;
+    padding: 2px;
     border-radius: 4px;
-
-    color: ${props => props.selected ? "#181818" : "#E0A52E"};
-    background-color: ${props => props.selected ? "#E0A52E" : "#181818"};
-
+    
+    background-color: ${props => props.selected === true ? "#E0A52E;" : "transparent;"};
+    color: ${props => color(props)};
+    display: ${props => props.visible === true ? "flex;" : "none;"}
+    
     :hover{
         text-decoration: underline;
     }
-` 
+`

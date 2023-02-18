@@ -9,7 +9,7 @@ export const Container = styled.div`
     border-radius: 8px;
     gap: 12px;
     padding-bottom: 8px;
-    cursor: pointer;
+    cursor: default;
     transition: .5s;
     
     img{

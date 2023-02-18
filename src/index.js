@@ -18,17 +18,17 @@ const router = createBrowserRouter([
     element: <Home />
   },
   {
-    path: "/Movie",
+    path: "/Movie/:key",
     element: <Movie />
   },
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <>
     <RouterProvider router={router} />
     <GlobalStyle />
-  </React.StrictMode>
+  </>
 );
 
 // If you want to start measuring performance in your app, pass a function
