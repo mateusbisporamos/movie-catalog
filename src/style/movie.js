@@ -14,9 +14,10 @@ export const Container = styled.div`
     
     img{
         width: 100%;
-        height: 100%;
-        min-height: 332px;
-        max-height: 332px;
+        min-width: 100%;
+        max-height: 4380px;
+        min-height: 380px;
+        object-fit: cover;
         border-radius: 8px;
     }
 

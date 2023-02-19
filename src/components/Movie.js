@@ -8,7 +8,7 @@ const Movie = ({ id, title, posterURL }) => {
         <S.Container>
             <img src={`https://image.tmdb.org/t/p/original${posterURL}`} alt={`${title} Poster`} />
             <p>{title}</p>
-            <Link to={`/Movie/${id}`} style={{ textDecoration: 'none' }}> <button>SEE MORE</button> </Link>
+            <Link to={`/movie/${id}`} style={{ textDecoration: 'none' }}> <button>SEE MORE</button> </Link>
         </S.Container>
     )
 }

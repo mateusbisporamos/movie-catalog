@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import GlobalStyle from './style/global';
 
 import Home from "./pages/Home"
-import Movie from "./pages/Movie"
+import AboutMovie from "./pages/AboutMovie"
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 const router = createBrowserRouter([
@@ -18,8 +18,8 @@ const router = createBrowserRouter([
     element: <Home />
   },
   {
-    path: "/Movie/:key",
-    element: <Movie />
+    path: "/movie/:id",
+    element: <AboutMovie />
   },
 ])
 
